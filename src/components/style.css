@@ -1,0 +1,26 @@
+article {
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+article .percent-value {
+    margin-bottom: .25rem;
+}
+
+article .percent-value,
+article .color-value,
+article .alert {
+    font-size: 17px;
+    font-weight: 500;
+    color: #444;
+}
+
+article .alert {
+    margin-top: 1.75rem;
+}
+
+article.color-light .percent-value,
+article.color-light .color-value,
+article.color-light .alert {
+    color: #fff;
+}

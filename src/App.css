@@ -1,38 +1,63 @@
 .App {
-  text-align: center;
+    padding: 4rem 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (max-width: 768px) {
+    .container {
+        display: block;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container h3 {
+    font-size: 1.75rem;
+    letter-spacing: .1rem;
+    color: #444;
+    margin-right: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.container form input {
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container form input[type='text'] {
+    width: 250px;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+    border: 1px solid #fff;
+    border-right: none;
+}
+
+@media (max-width: 768px) {
+    .container form input[type='text'] {
+        margin: 1rem 0;
+    }
+}
+
+.container form input[type='text'].error {
+    border-color: #f00;
+}
+
+.container form input[type='submit'] {
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+    background-color: #49a6e9;
+    border: 1px solid #49a6e9;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
 }
